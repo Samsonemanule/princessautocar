@@ -71,8 +71,10 @@ function setupNavToggles() {
     els(".nav-toggle").forEach(btn => {
         btn.addEventListener("click", () => {
             const nav = btn.nextElementSibling;
+            const controls = document.querySelector(".controls");
             if (nav) {
                 nav.classList.toggle("show");
+                controls.classList.toggle("show");
             }
         });
     });
