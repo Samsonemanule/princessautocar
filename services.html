@@ -12,21 +12,32 @@
     <!-- header (same as index) -->
     <header class="header">
         <div class="container header-inner">
-            <a class="logo" href="index.html">Princess Auto Austin</a>
-            <button class="nav-toggle" id="navToggle2" aria-label="toggle menu">☰</button>
-            <nav class="nav" id="nav2">
+            <!-- Logo Image -->
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Princess Auto Austin Logo" class="logo-img">
+                <div class="logo-text-container">
+                    <span class="logo-text">Princess Auto Austin</span>
+                    <p class="logo-subtext">Car Sale and Maintenance</p>
+                </div>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="toggle menu">☰</button>
+
+            <nav class="nav" id="nav">
                 <a href="index.html" data-i18n="nav_home">Home</a>
                 <a href="services.html" data-i18n="nav_services">Services</a>
                 <a href="inventory.html" data-i18n="nav_cars">Cars</a>
                 <a href="about.html" data-i18n="nav_about">About</a>
                 <a href="contact.html" data-i18n="nav_contact">Contact</a>
             </nav>
+
             <div class="controls">
-                <select id="langSwitcherSvc">
+                <select id="langSwitcher" aria-label="Language switcher">
                     <option value="en">EN</option>
                     <option value="es">ES</option>
                     <option value="am">AM</option>
                 </select>
+                <a class="btn-small" href="contact.html" data-i18n="cta_call">Call / Book</a>
             </div>
         </div>
     </header>
