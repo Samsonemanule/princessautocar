@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Inventory — Princess Auto Austin</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Princess Auto Austin</a>
+            <button class="nav-toggle" id="navToggleInv">☰</button>
+            <nav class="nav" id="navInv">
+                <a href="index.html">Home</a><a href="services.html">Services</a><a href="inventory.html">Cars</a><a
+                    href="about.html">About</a><a href="contact.html">Contact</a>
+            </nav>
+            <div class="controls">
+                <select id="langSwitcherInv">
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                    <option value="am">AM</option>
+                </select>
+                <a class="btn-small" href="contact.html">Call / Book</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section">
+        <h1>Inventory</h1>
+        <p class="lead">Browse our available vehicles. Click a card for more details.</p>
+
+        <div class="inventory-filters">
+            <input id="searchInput" placeholder="Search make, model, year or price..." />
+        </div>
+
+        <div class="grid-3" id="inventoryList">
+            <!-- JS will populate sample inventory; replace with real data -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container copy">© <span id="yearInv"></span> Princess Auto Austin — All rights reserved</div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
