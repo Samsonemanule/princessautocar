@@ -577,6 +577,34 @@ h1 {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    /* NAV and CONTROLS stack together when mobile menu opens */
+    .nav {
+        order: 2;
+        width: 100%;
+    }
+
+    .controls {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        /* hide until menu is opened */
+    }
+
+    /* When nav is visible => show controls under it */
+    .nav.show+.controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 /* =========================================
    RESPONSIVE
 ========================================= */
