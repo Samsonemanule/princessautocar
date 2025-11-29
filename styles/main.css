@@ -652,6 +652,10 @@ h1 {
         display: flex;
     }
 
+    .nav-toggle {
+        display: inline-block;
+    }
+
     .grid-3,
     .grid-4 {
         grid-template-columns: 1fr;
