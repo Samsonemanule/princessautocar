@@ -580,7 +580,9 @@ h1 {
 @media (max-width: 768px) {
 
     .header-inner {
-        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     /* NAV and CONTROLS stack together when mobile menu opens */
@@ -589,12 +591,36 @@ h1 {
         width: 100%;
     }
 
+    /* Logo container should not wrap */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
     .controls {
         order: 3;
         width: 100%;
         margin-top: 10px;
         display: none;
         /* hide until menu is opened */
+    }
+
+    .nav-toggle {
+        font-size: 30px;
+        /* larger icon */
+        padding: 10px 14px;
+        /* larger tap area */
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 
     /* When nav is visible => show controls under it */
