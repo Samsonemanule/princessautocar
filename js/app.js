@@ -261,7 +261,7 @@ function loadGoogleReviewsIfPossible() {
                 if (!wrap) return;
                 wrap.innerHTML = "";
                 if (place.reviews && place.reviews.length) {
-                    place.reviews.slice(0, 3).forEach(r => {
+                    place.reviews.slice(0, 5).forEach(r => {
                         // Google review's time is in seconds
                         const card = createReviewCard(r.author_name, r.rating, r.text, r.time || Math.floor(Date.now() / 1000));
                         wrap.appendChild(card);
@@ -356,29 +356,6 @@ if (document.readyState === "loading") {
 } else {
     init();
 }
-// document.addEventListener("DOMContentLoaded", () => {
-
-//     setupNavToggles();  // your existing mobile menu toggle
-
-//     // ------------------------------------------
-//     // Sync language dropdowns (desktop + mobile)
-//     // ------------------------------------------
-//     const langDesktop = document.getElementById("langSwitcher");
-//     const langMobile = document.getElementById("langSwitcherMobile");
-
-//     if (langDesktop && langMobile) {
-
-//         langDesktop.addEventListener("change", () => {
-//             langMobile.value = langDesktop.value;
-//         });
-
-//         langMobile.addEventListener("change", () => {
-//             langDesktop.value = langMobile.value;
-//         });
-//     }
-
-// });
-
 
 /* Expose CONFIG (easy for user to edit in console) */
 window.PRINCESS_CONFIG = CONFIG;

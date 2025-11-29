@@ -157,38 +157,6 @@ body {
     transition: 0.25s ease;
 }
 
-.mobile-controls {
-    display: none;
-}
-
-/* Hide top bar controls on mobile */
-@media (max-width: 900px) {
-    .controls {
-        display: none;
-    }
-
-    .mobile-controls {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 14px;
-        padding-top: 12px;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .mobile-controls select {
-        padding: 8px;
-        border-radius: 6px;
-        background: #ffffff;
-        color: #000;
-        font-weight: 600;
-    }
-
-    .mobile-controls .btn-small {
-        text-align: center;
-    }
-}
-
 .nav a:hover {
     color: var(--primary);
     background: rgba(58, 166, 208, 0.18);
@@ -529,68 +497,6 @@ h1 {
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
-}
-
-.section-impact,
-.section-light {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.sub-heading {
-    margin-bottom: 40px;
-    color: #666;
-    font-weight: 400;
-}
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-.card {
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
-}
-
-.icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-/* Icon colors */
-.green {
-    color: #28A745;
-}
-
-.blue {
-    color: #007BFF;
-}
-
-.gold {
-    color: #FFD700;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 500px) {
-    .grid-4 {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* ============================
