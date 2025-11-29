@@ -221,17 +221,17 @@ body {
 @keyframes heroSlide {
     0% {
         background-image: url("../assets/slide1.jpg");
-        filter: brightness(1.0);
+        filter: brightness(1.1);
     }
 
     10% {
         background-image: url("../assets/slide2.jpg");
-        filter: brightness(1.0);
+        filter: brightness(1.1);
     }
 
     20% {
         background-image: url("../assets/slide3.jpg");
-        filter: brightness(1.0);
+        filter: brightness(1.1);
     }
 
     30% {
@@ -577,12 +577,64 @@ h1 {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* NAV and CONTROLS stack together when mobile menu opens */
+    .nav {
+        order: 2;
+        width: 100%;
+    }
+
+    /* Logo container should not wrap */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .controls {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+        /* hide until menu is opened */
+    }
+
+    .nav-toggle {
+        font-size: 30px;
+        /* larger icon */
+        padding: 10px 14px;
+        /* larger tap area */
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* When nav is visible => show controls under it */
+    .nav.show+.controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 /* =========================================
-   MOBILE NAV & MAIN RESPONSIVE – up to 900px
+   RESPONSIVE
 ========================================= */
 @media (max-width: 900px) {
-
-    /* NAV DROPDOWN */
     .nav {
         display: none;
         position: fixed;
@@ -594,23 +646,16 @@ h1 {
         flex-direction: column;
         gap: 12px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        z-index: 999;
     }
 
     .nav.show {
         display: flex;
     }
 
-    /* Show mobile toggle button */
     .nav-toggle {
         display: inline-block;
-        font-size: 30px;
-        padding: 10px 14px;
-        cursor: pointer;
-        border-radius: 8px;
     }
 
-    /* GRID collapse */
     .grid-3,
     .grid-4 {
         grid-template-columns: 1fr;
@@ -621,61 +666,7 @@ h1 {
     }
 }
 
-/* =========================================
-   HEADER BEHAVIOR – up to 768px
-   (Extends & matches the 900px rules)
-========================================= */
-@media (max-width: 768px) {
-
-    .header-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    /* Keep logo inline, prevent wrap */
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
-    }
-
-    /* Circle logo image */
-    .logo-img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    /* Controls hidden until nav opens */
-    .controls {
-        order: 3;
-        width: 100%;
-        margin-top: 10px;
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Controls appear right under nav when menu opens */
-    .nav.show+.controls {
-        display: flex;
-    }
-
-    /* Ensure nav expands full width inside header logic */
-    .nav {
-        width: 100%;
-        order: 2;
-    }
-}
-
-/* =========================================
-   VERY SMALL SCREENS – up to 420px
-========================================= */
 @media (max-width: 420px) {
-
     .hero p {
         font-size: 16px;
     }
