@@ -157,6 +157,42 @@ body {
     transition: 0.25s ease;
 }
 
+.mobile-controls {
+    display: none;
+}
+
+.mobile-controls {
+    display: none;
+}
+
+/* Hide top bar controls on mobile */
+@media (max-width: 900px) {
+    .controls {
+        display: none;
+    }
+
+    .mobile-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .mobile-controls select {
+        padding: 8px;
+        border-radius: 6px;
+        background: #ffffff;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .mobile-controls .btn-small {
+        text-align: center;
+    }
+}
+
 .nav a:hover {
     color: var(--primary);
     background: rgba(58, 166, 208, 0.18);

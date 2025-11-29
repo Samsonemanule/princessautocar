@@ -356,6 +356,29 @@ if (document.readyState === "loading") {
 } else {
     init();
 }
+document.addEventListener("DOMContentLoaded", () => {
+
+    setupNavToggles();  // your existing mobile menu toggle
+
+    // ------------------------------------------
+    // Sync language dropdowns (desktop + mobile)
+    // ------------------------------------------
+    const langDesktop = document.getElementById("langSwitcher");
+    const langMobile = document.getElementById("langSwitcherMobile");
+
+    if (langDesktop && langMobile) {
+
+        langDesktop.addEventListener("change", () => {
+            langMobile.value = langDesktop.value;
+        });
+
+        langMobile.addEventListener("change", () => {
+            langDesktop.value = langMobile.value;
+        });
+    }
+
+});
+
 
 /* Expose CONFIG (easy for user to edit in console) */
 window.PRINCESS_CONFIG = CONFIG;
