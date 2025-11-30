@@ -675,3 +675,492 @@ h1 {
         font-size: 18px;
     }
 }
+
+/* Page wrapper */
+.section.contact-page {
+    padding: 60px 0;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* two equal columns */
+    gap: 40px;
+    padding: 20px 0;
+}
+
+/* Page title */
+.contact-page h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Two-column layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* Form card */
+.contact-card,
+.map-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+    transition: 0.3s ease;
+}
+
+.contact-card:hover,
+.map-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+/* Form input styling */
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    background: #1f2023;
+    border: 1px solid #333;
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 16px;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(58, 166, 208, 0.4);
+}
+
+#contactForm button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+/* Map card */
+.map-embed iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 12px;
+}
+
+#leaveGoogleReviewBtn2 {
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Two-column layout for contact details + form */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* two equal columns */
+    gap: 40px;
+    padding: 20px 0;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 820px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+
+        /* single column on mobile */
+    }
+
+    #contactReviews {
+        grid-column: 1;
+        /* make sure it still spans full width */
+    }
+}
+
+/* Optional: style individual columns */
+.contact-details,
+.Contact-form {
+    background: var(--card);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+    transition: 0.3s ease;
+}
+
+.contact-details:hover,
+.Contact-form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+/* Individual contact detail boxes */
+.contact-details>div {
+    background: var(--card);
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.contact-details>div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure Contact Reviews take full width */
+#contactReviews {
+    grid-column: 1 / -1;
+    /* spans all columns in grid */
+    width: 100%;
+    background: #1f2023;
+    padding: 16px;
+    border-radius: 10px;
+    min-height: 80px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Leave Review button full width */
+#leaveGoogleReviewBtn2 {
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.contact-details {
+    background-color: #1F2937;
+    /* dark gray-blue background */
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-details h1 {
+    font-size: 26px;
+    color: #F9FAFB;
+    /* almost white */
+    margin-bottom: 8px;
+    font-weight: 600;
+    position: relative;
+}
+
+.contact-details h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.contact-details h2 {
+    font-size: 16px;
+    color: #E5E7EB;
+    /* light gray/white text */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.contact-details .location h1,
+.contact-details .phone h1,
+.contact-details .email h1,
+.contact-details .Operating h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Page wrapper */
+.section.contact-page {
+    padding: 60px 0;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* two equal columns */
+    gap: 40px;
+    padding: 20px 0;
+}
+
+/* Page title */
+.contact-page h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Two-column layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* Form card */
+.contact-card,
+.map-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+    transition: 0.3s ease;
+}
+
+.contact-card:hover,
+.map-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+/* Form input styling */
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    background: #1f2023;
+    border: 1px solid #333;
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 16px;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(58, 166, 208, 0.4);
+}
+
+#contactForm button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+/* Map card */
+.map-embed iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 12px;
+}
+
+#leaveGoogleReviewBtn2 {
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Two-column layout for contact details + form */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* two equal columns */
+    gap: 40px;
+    padding: 20px 0;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 820px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+
+        /* single column on mobile */
+    }
+
+    #contactReviews {
+        grid-column: 1;
+        /* make sure it still spans full width */
+    }
+}
+
+/* Optional: style individual columns */
+.contact-details,
+.Contact-form {
+    background: var(--card);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+    transition: 0.3s ease;
+}
+
+.contact-details:hover,
+.Contact-form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+/* Individual contact detail boxes */
+.contact-details>div {
+    background: var(--card);
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.contact-details>div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure Contact Reviews take full width */
+#contactReviews {
+    grid-column: 1 / -1;
+    /* spans all columns in grid */
+    width: 100%;
+    background: #1f2023;
+    padding: 16px;
+    border-radius: 10px;
+    min-height: 80px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Leave Review button full width */
+#leaveGoogleReviewBtn2 {
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.contact-details {
+    background-color: #1F2937;
+    /* dark gray-blue background */
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-details h1 {
+    font-size: 26px;
+    color: #F9FAFB;
+    /* almost white */
+    margin-bottom: 8px;
+    font-weight: 600;
+    position: relative;
+}
+
+.contact-details h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.contact-details h2 {
+    font-size: 16px;
+    color: #E5E7EB;
+    /* light gray/white text */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.contact-details .location h1,
+.contact-details .phone h1,
+.contact-details .email h1,
+.contact-details .Operating h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Headings inside any .grid-3 container */
+.grid-3 h1,
+.grid-3 h2,
+.grid-3 h3,
+.grid-3 h4,
+.grid-3 h5,
+.grid-3 h6 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    color: #ffffff;
+    /* white text for better contrast */
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+/* Adjust heading sizes */
+.grid-3 h1 {
+    font-size: 2rem;
+}
+
+.grid-3 h2 {
+    font-size: 1.6rem;
+}
+
+.grid-3 h3 {
+    font-size: 1.3rem;
+}
+
+.grid-3 h4 {
+    font-size: 1.1rem;
+}
+
+.grid-3 h5 {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.grid-3 h6 {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .grid-3 h1 {
+        font-size: 1.6rem;
+    }
+
+    .grid-3 h2 {
+        font-size: 1.4rem;
+    }
+
+    .grid-3 h3 {
+        font-size: 1.2rem;
+    }
+}
