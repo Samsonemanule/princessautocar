@@ -263,7 +263,7 @@ function loadGoogleReviewsIfPossible() {
                 if (!wrap) return;
                 wrap.innerHTML = "";
                 if (place.reviews && place.reviews.length) {
-                    place.reviews.slice(0, 3).forEach(r => {
+                    place.reviews.slice(0, 27).forEach(r => {
                         // Google review's time is in seconds
                         const card = createReviewCard(r.author_name, r.rating, r.text, r.time || Math.floor(Date.now() / 1000));
                         wrap.appendChild(card);
