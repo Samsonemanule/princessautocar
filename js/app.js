@@ -332,7 +332,7 @@ function setupContactForm() {
         // For now we'll open the default mail client as a fallback:
         const subject = encodeURIComponent(`Website Inquiry from ${name}`);
         const body = encodeURIComponent(`${message}\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`);
-        window.location.href = `mailto:princessautoaustin@example.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:princessautocar@gmail.com?subject=${subject}&body=${body}`;
     });
 }
 
