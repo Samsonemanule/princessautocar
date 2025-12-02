@@ -60,7 +60,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 14px 0;
-    padding-right: 12px;
 }
 
 .logo {
@@ -171,7 +170,6 @@ body {
     font-size: 22px;
     color: var(--text);
     cursor: pointer;
-    position: relative;
     right: 8px;
 }
 
@@ -618,7 +616,7 @@ h1 {
         /* larger tap area */
         border-radius: 8px;
         cursor: pointer;
-        position: relative;
+        right: 12px;
     }
 
     .logo-img {
@@ -659,6 +657,7 @@ h1 {
 
     .nav-toggle {
         display: inline-block;
+        right: 12px;
     }
 
     .grid-3,
